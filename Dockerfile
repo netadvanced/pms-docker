@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
-ARG S6_OVERLAY_VERSION=v1.17.2.0
+ARG S6_OVERLAY_VERSION=v1.22.1.0
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV TERM="xterm" LANG="C.UTF-8" LC_ALL="C.UTF-8"
 
@@ -15,6 +15,10 @@ RUN \
       xmlstarlet \
       uuid-runtime \
       unrar \
+      unzip \
+      net-tools \
+      dnsutils \
+      traceroute \
     && \
 
 # Fetch and extract S6 overlay
