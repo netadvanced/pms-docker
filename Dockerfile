@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG S6_OVERLAY_VERSION=v1.22.1.0
+ARG S6_OVERLAY_VERSION=v1.18.1.5
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV TERM="xterm" LANG="C.UTF-8" LC_ALL="C.UTF-8"
 
@@ -19,6 +19,7 @@ RUN \
       net-tools \
       dnsutils \
       traceroute \
+      nano \
     && \
 
 # Fetch and extract S6 overlay
